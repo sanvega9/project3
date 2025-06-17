@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0D0D25">
+    <ImageView
+        android:id="@+id/parakeet_logo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/logo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+    <ImageView
+        android:id="@+id/search_icon"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="320dp"
+        android:layout_marginTop="20dp"
+        />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/banner_card"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/parakeet_logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/banner_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/snowdrop" />
+
+            <TextView
+                android:id="@+id/exclusive_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Streaming Exclusively on Parakeet+"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="12dp"
+                android:background="@drawable/label_bg" />
+        </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    <!-- 2 x 3 category grid-->
+    <GridLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:columnCount="3"
+        android:rowCount="2"
+        android:id="@+id/parakeet"
+        app:layout_constraintTop_toBottomOf="@+id/banner_card"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="4dp"
+            android:background="@drawable/image_box_bg"
+            >
+            <ImageView
+                android:id="@+id/chirp_studios"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/chirpstudio"
+                />
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="4dp"
+            android:background="@drawable/image_box_bg">
+            <ImageView
+                android:id="@+id/beak_wars"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/beakwars"/>
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="4dp"
+            android:background="@drawable/image_box_bg">
+            <ImageView
+                android:id="@+id/mar_bird"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/marbird"/>
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="4dp"
+            android:background="@drawable/image_box_bg">
+            <ImageView
+                android:id="@+id/nest_geo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/nestgeo"/>
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="4dp"
+            android:background="@drawable/image_box_bg">
+            <ImageView
+                android:id="@+id/peck_feathery"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/peckfeathery"/>
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="4dp"
+            android:background="@drawable/image_box_bg">
+            <ImageView
+                android:id="@+id/starling"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/starling"/>
+        </FrameLayout>
+    </GridLayout>
+
+
+    <TextView
+        android:id="@+id/celebrate_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="240dp"
+        android:text="Celebrate Parakeet+ Day"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/parakeet" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:scrollbars="none"
+        app:layout_constraintTop_toBottomOf="@id/celebrate_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Example Card 1 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="140dp"
+                android:layout_height="200dp"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/cutebudgies" />
+            </androidx.cardview.widget.CardView>
+
+            <!-- Example Card 2 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="140dp"
+                android:layout_height="200dp"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/thefeatheredchef" />
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="140dp"
+                android:layout_height="200dp"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/flyingschool" />
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#1E1E1E"
+        app:itemBackground="@drawable/label_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+
+        <fragment
+        android:id="@+id/nav_host_fragment_activity_main"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toTopOf="@id/nav_view"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/mobile_navigation" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
